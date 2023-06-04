@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="example-container">
+<h1>Modificar empleado</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>Documento</mat-label>
+        <input [(ngModel)]="edit_employee.document_employee" matInput type="number" name="document" readonly >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input [(ngModel)]="edit_employee.name_employee"  matInput type="text" name="name_employee"  required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input  [(ngModel)]="edit_employee.last_name_employee" matInput type="text" name="last_name_employee" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input [(ngModel)]="edit_employee.email_employee" matInput type="email"name="email_employee" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Contraseña</mat-label >
+        <input  [(ngModel)]="edit_employee.password_employee" matInput type="text" name="password_employee" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Rol</mat-label>
+        <mat-select  [(ngModel)]="edit_employee.role_employee" name="role_employee"  >
+          <mat-option value="Asesor">Asesor</mat-option>
+          <mat-option value="Técnico">Técnico</mat-option>
+          <mat-option value="Inventario">Logistica</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button (click)="EditEmployee()" mat-fab extended color="primary" id="btn_guardar">Guardar</button>
+    </div>
+</div>
+

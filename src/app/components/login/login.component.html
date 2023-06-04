@@ -1,19 +1,18 @@
 <div class="container">
     <div class="container2">
         <img src="../../../assets/images/logo.png" alt="">
-        <h1>Inicio de sesión</h1>
-        <form class="example-form">
+        <h1>Inicio de sesión </h1>
           <div class="example-container">
-
+            <i class="fa-thin fa-user"></i>
             <mat-form-field class="example-full-width">
               <mat-label>Ingresa tu correo</mat-label>
-              <input matInput placeholder="example@example.com" [formControl]="email" required>
+              <input  [(ngModel)]="password" matInput placeholder="example@example.com" [formControl]="email" required>
               <mat-error *ngIf="email.invalid">{{getError()}}</mat-error>
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
               <mat-label>Ingresa tu contraseña</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'">
+              <input [(ngModel)]="email_"  matInput [type]="hide ? 'password' : 'text'">
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? '' : ''}}</mat-icon>
                 
@@ -23,12 +22,10 @@
               <a mat-button routerLink=".">Recuperar contraseña</a>
               <div class="example-button-container">
                 <div>
-              <button mat-fab extended color="primary" id="btn_inicio">Inicio</button>
+              <button (click)="validation()" mat-fab extended color="primary" id="btn_inicio">Inicio</button>
             </div>
             </div>
           </div>
-          </form>
-          
     </div>
 </div>
 

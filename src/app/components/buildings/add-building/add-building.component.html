@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="example-container">
+        <h1>Agregar empleado</h1>
+<mat-form-field class="example-full-width">
+    <mat-label>Nit</mat-label>
+    <input [(ngModel)]="addBulding.nit_building" matInput type="number" required >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input  [(ngModel)]="addBulding.name_building" matInput type="text" required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Dirección</mat-label>
+    <input  [(ngModel)]="addBulding.address_building" matInput type="text" required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Teléfono</mat-label>
+    <input  [(ngModel)]="addBulding.phone_building" matInput type="number" required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Correo</mat-label >
+    <input  [(ngModel)]="addBulding.email_building" matInput type="email" required>
+  </mat-form-field>
+  
+
+
+
+<div class="example-button-container">
+<div>
+    <button (click)="add_building()"  mat-fab extended color="primary" id="btn_guardar">Guardar</button>
+</div>
+</div>
+</div>
+</div>

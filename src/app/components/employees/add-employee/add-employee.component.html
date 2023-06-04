@@ -1,0 +1,41 @@
+<div class="container">
+        <div class="example-container">
+            <h1>Agregar empleado</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>Documento</mat-label>
+        <input [(ngModel)]="addEmployee.document_employee" matInput type="number" required >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input  [(ngModel)]="addEmployee.name_employee" matInput type="text" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input  [(ngModel)]="addEmployee.last_name_employee" matInput type="text" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input  [(ngModel)]="addEmployee.email_employee" matInput type="email" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Contraseña</mat-label >
+        <input  [(ngModel)]="addEmployee.password_employee" matInput type="text" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Rol</mat-label>
+        <mat-select  [(ngModel)]="addEmployee.role_employee">
+          <mat-option value="Agente">Agente</mat-option>
+          <mat-option value="Técnico">Técnico</mat-option>
+          <mat-option value="Inventario">Inventario</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+  <div class="example-button-container">
+    <div>
+        <button (click)="registerEmployee()"  mat-fab extended color="primary" id="btn_guardar">Guardar</button>
+</div>
+</div>
+</div>
+</div>

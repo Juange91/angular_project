@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.example-container  {
+    margin-left : 8px ;
+    min-width: 150px;
+    max-width: 400px;
+    width: 100%;
+ }
+ #btn_guardar {
+    width: 200%;
+}

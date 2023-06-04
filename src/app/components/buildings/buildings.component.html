@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="demo-button-container">
+        <button  mat-raised-button routerLink="/Nuevo_edificio"  >
+          Nuevo edificio
+        </button>
+      </div>
+      
+    <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: xxxxxx" #input>
+      </mat-form-field>
+      
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <!-- nit Column -->
+        <ng-container matColumnDef="nit_building">
+          <th mat-header-cell *matHeaderCellDef> Nit </th>
+          <td mat-cell *matCellDef="let data"> {{data.nit_building}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name_building">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let data"> {{data.name_building}} </td>
+        </ng-container>
+      
+        <!-- address Column -->
+        <ng-container matColumnDef="address_building">
+          <th mat-header-cell *matHeaderCellDef> Dirección </th>
+          <td mat-cell *matCellDef="let data"> {{data.address_building}} </td>
+        </ng-container>
+        <!-- phone Column -->
+        <ng-container matColumnDef="phone_building">
+          <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+          <td mat-cell *matCellDef="let data"> {{data.phone_building}} </td>
+        </ng-container>
+
+        <!-- email Column -->
+        <ng-container matColumnDef="email_building">
+          <th mat-header-cell *matHeaderCellDef> Correo </th>
+          <td mat-cell *matCellDef="let data"> {{data.email_building}} </td>
+        </ng-container>
+
+        <!-- administrator Column -->
+        <ng-container matColumnDef="administrator_name">
+          <th mat-header-cell *matHeaderCellDef> Administrador </th>
+          <td mat-cell *matCellDef="let data"> {{data.administrator_name}} </td>
+        </ng-container>
+      
+        <!-- actions Column -->
+        <ng-container matColumnDef="eliminar">
+          <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+          
+          <td>
+          <button mat-raised-button color="warn" mat-cell *matCellDef="let data">Eliminar</button>
+          </td>
+        </ng-container>
+
+        
+          <ng-container matColumnDef="editar" >
+            <th mat-header-cell *matHeaderCellDef> Editar</th>
+          <td>
+            <button id="btn_edit" mat-raised-button color="primary"mat-cell *matCellDef="let data">Editar</button> 
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No hay resultados de "{{input.value}}"</td>
+        </tr>
+      </table>   
+</div>
+
