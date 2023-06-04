@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EmployeesService {
 //url = '/api';
-url = 'http://localhost:3000/api'
+url = 'https://salt-bald-trombone.glitch.me/api'
   constructor(private http:HttpClient) { }
 
 viewEmployees(){
